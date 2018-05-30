@@ -1,0 +1,19 @@
+<html>
+<body>
+<Script Language="JavaScript">
+function _getMercator() {//[114.32894, 30.585748]
+    var mercatorx = 0;
+    var mercatory = 0;
+    var earthRad = 6378137.0;
+    // console.log("mercator-poi",poi);
+    mercatorx = 116.170003 * Math.PI / 180 * earthRad;
+    var a = 40.182562 * Math.PI / 180;
+    mercatory = earthRad / 2 * Math.log((1.0 + Math.sin(a)) / (1.0 - Math.sin(a)));
+    // console.log("mercator",mercator);
+    return mercatory; //[12727039.383734727, 3579066.6894065146]
+}
+alert(_getMercator()) 
+
+</script>
+</body>
+</html>
